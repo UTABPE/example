@@ -1,0 +1,1 @@
+export { DisplayCell } from './component';

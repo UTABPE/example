@@ -1,0 +1,149 @@
+import { Meta, Story, ArgsTable, Canvas } from '@storybook/addon-docs';
+import { Button } from '@components/atoms/Button';
+import { StarOutline, Search, Check } from '@components/atoms/Icon';
+import { Row, Col } from 'antd';
+
+<Meta
+  title="components/atoms/Button"
+  argTypes={{
+    buttonSize: {
+      options: ['xl', 'lg', 'md', 'sm', 'xs', 'xxs'],
+      control: { type: 'radio' },
+    },
+  }}
+  component={Button}
+/>
+
+export const Template = (args) => <Button {...args}>Label</Button>;
+
+# Кнопки
+
+Кнопка – компонент, который побуждает пользователя произвести какое-то завершающее действие или сделать выбор. Например, перейти на следующую страницу или назад, дать согласие на обработку данных, подтвердить действие и т.п.
+
+### Installation
+
+```js
+import { Button } from '@components/atoms/Button';
+```
+
+#### Основная кнопка (синяя)
+
+Используется, когда необходимо обозначить ключевое или стартовое действие на странице. Например, начать заполнение формы или завершить работу с формой. На одной странице не может использоваться свыше одной основной кнопки. Также кнопки используются в диалоговом окне, когда интерфейс предлагает совершить те или иные альтернативные действия. Например, продолжить работу или вернуться к редактированию.
+
+<Canvas>
+  <Story
+    name="Primary button"
+    argTypes={{
+      buttonSize: {
+        options: ['xl', 'lg', 'md', 'sm', 'xs', 'xxs'],
+        control: { type: 'radio' },
+      },
+    }}
+    args={{ buttonSize: 'md' }}
+  >
+    <Button>Label</Button>
+  </Story>
+</Canvas>
+
+#### Call to action (желтая)
+
+Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов.
+
+<Canvas>
+  <Story name="Call to action button">
+    <Button className="ant-btn-action">Label</Button>
+  </Story>
+</Canvas>
+
+#### Второстепенная кнопка (с обводкой)
+
+Используется, когда компонент не должен привлекать повышенного внимания или когда место на странице ограничено для размещения, а использование ссылки не подходит. Кнопка может помещаться на одной строке с другими компонентами и не предполагает привлечения обязательного внимания всех пользователей.
+
+<Canvas>
+  <Story name="Default button">
+    <Button type="default">Label</Button>
+  </Story>
+</Canvas>
+
+### Второстепенная кнопка (текстовая)
+
+Может быть у этой кнопки не должно быть паддинга, выравнивать сложно. Пример левее...
+
+<Canvas>
+  <Story name="Text button" withToolbar>
+    <Button type="text">Label</Button>
+  </Story>
+</Canvas>
+
+### Icon only button
+
+<Canvas>
+  <Story name="Icon only button" withToolbar>
+    <Button icon={<StarOutline />} shape="circle"></Button>
+  </Story>
+</Canvas>
+
+### Appending an icon
+
+We can place an icon inside the Button in either the leading or the trailing position to enhance the visual context. It is recommended to use an octicon here.
+
+<Canvas>
+  <Story name="Appending an icon button" withToolbar>
+    <Col className="gutter-row">
+      <Button icon={<Search />} className="mt-2">
+        Search
+      </Button>
+      <Button className="mt-2">
+        Search <Search />
+      </Button>
+      <Button icon={<Search />} className="mt-2">
+        Search <Check />
+      </Button>
+    </Col>
+  </Story>
+</Canvas>
+
+### Different sized buttons
+
+<Canvas>
+  <Story name="Different sized button" withToolbar>
+    <Col className="gutter-row">
+      <Button buttonSize="xxs" className="mt-2">
+        Label
+      </Button>
+      <Button buttonSize="xs" className="mt-2">
+        Label
+      </Button>
+      <Button buttonSize="sm" className="mt-2">
+        Label
+      </Button>
+      <Button buttonSize="md" className="mt-2">
+        Label
+      </Button>
+      <Button buttonSize="lg" className="mt-2">
+        Label
+      </Button>
+      <Button buttonSize="xl" className="mt-2">
+        Label
+      </Button>
+    </Col>
+  </Story>
+</Canvas>
+
+### Disabled buttons
+
+<Canvas>
+  <Story name="Disabled button" withToolbar>
+    <Row>
+      <Button className="mr-4" disabled>
+        Label
+      </Button>
+      <Button type="default" className="mr-4" disabled>
+        Label
+      </Button>
+      <Button shape="circle" icon={<StarOutline />} disabled />
+    </Row>
+  </Story>
+</Canvas>
+
+<ArgsTable story="Primary button" />

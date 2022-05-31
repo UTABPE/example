@@ -1,0 +1,19 @@
+
+
+replicaCount: 1
+
+
+pullPolicy: "Always"
+
+
+imagePullSecrets: "gitlab"
+image:
+  repository: ""
+  tag: ""
+  branch: ""
+
+
+containerPort: 80
+
+type: ClusterIP
+terminationGracePeriodSeconds: 60

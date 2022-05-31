@@ -1,0 +1,24 @@
+import { Meta, Story, ArgsTable, Canvas } from '@storybook/addon-docs';
+import { ToggleSwitch } from '@components/atoms/ToggleSwitch';
+
+<Meta
+  title="components/atoms"
+  argTypes={{
+    checked: {
+      control: { type: 'boolean' },
+    },
+  }}
+  component={ToggleSwitch}
+/>
+
+export const Template = (args) => <ToggleSwitch {...args} />;
+
+# Toggle switch
+
+Используется для быстрого переключения между двумя возможными состояниями. Они обычно используются для переключателей «вкл / выкл».
+
+<Canvas>
+  <Story name="Toggle switch"> {Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable of={ToggleSwitch} />

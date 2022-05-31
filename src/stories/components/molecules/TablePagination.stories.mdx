@@ -1,0 +1,33 @@
+import { Meta, Story, ArgsTable, Canvas } from '@storybook/addon-docs';
+import { TablePagination } from '@components/molecules/TablePagination';
+
+<Meta
+  title="components/molecules/TablePagination"
+  component={<TablePagination />}
+/>
+
+# Пагинация
+
+### Pagination minimum example
+
+<Canvas>
+  <Story name="Pagination minimum example">
+    <TablePagination pageSize={5} />
+  </Story>
+</Canvas>
+
+### Pagination medium example
+
+<Canvas>
+  <Story name="Pagination medium example">
+    <TablePagination pageSize={20} />
+  </Story>
+</Canvas>
+
+### Pagination max example
+
+<Canvas>
+  <Story name="Pagination max example">
+    <TablePagination pageSize={1000} />
+  </Story>
+</Canvas>

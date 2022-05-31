@@ -1,0 +1,1 @@
+export { AttachmentTwoTable } from './component';

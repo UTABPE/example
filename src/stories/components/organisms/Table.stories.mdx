@@ -1,0 +1,67 @@
+import { Meta, Story, ArgsTable, Canvas } from '@storybook/addon-docs';
+import { Row, Col, Table } from 'antd';
+
+<Meta title="components/organisms/Table" component={<Table />} />
+
+export const dataSource = [
+  {
+    key: '1',
+    name: 'Mike',
+    age: 32,
+    address: '10 Downing Street',
+  },
+  {
+    key: '2',
+    name: 'John',
+    age: 42,
+    address: '10 Downing Street',
+  },
+];
+
+export const columns = [
+  {
+    title: 'Name',
+    dataIndex: 'name',
+    key: 'name',
+  },
+  {
+    title: 'Age',
+    dataIndex: 'age',
+    key: 'age',
+  },
+  {
+    title: 'Address',
+    dataIndex: 'address',
+    key: 'address',
+  },
+];
+
+# Таблица
+
+A table displays rows of data.
+
+### When To Use
+
+- To display a collection of structured data.
+- To sort, search, paginate, filter data.
+
+### Basic table
+
+<Canvas>
+  <Story name="Basic table">
+    <Table
+      dataSource={dataSource}
+      columns={columns}
+      pagination={false}
+      bordered
+    />
+  </Story>
+</Canvas>
+
+### Empty table
+
+<Canvas>
+  <Story name="Empty table">
+    <Table dataSource={[]} columns={columns} pagination={false} />
+  </Story>
+</Canvas>

@@ -1,0 +1,32 @@
+import { Meta, Story, ArgsTable, Canvas } from '@storybook/addon-docs';
+import { Avatar } from '@components/atoms/Avatar';
+
+<Meta title="components/atoms/Avatar" component={<Avatar />} />
+
+# Аватар
+
+Аватар (также известный как Userpic) – это компонент, с помощью которого пользователь идентифицирует себя.
+
+### Пустой аватар
+
+<Canvas>
+  <Story name="Empty avatar">
+    <Avatar />
+  </Story>
+</Canvas>
+
+### Аватар с инициалами
+
+<Canvas>
+  <Story name="Initials avatar">
+    <Avatar />
+  </Story>
+</Canvas>
+
+### Аватар с изображением пользователя
+
+<Canvas>
+  <Story name="Userpic avatar">
+    <Avatar />
+  </Story>
+</Canvas>

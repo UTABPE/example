@@ -1,0 +1,76 @@
+export const CONTRACTORS_MOCK_DATA = [
+  {
+    id: 1,
+    name: 'Alabama Power Company',
+    language: 'Английский',
+    region: 'США',
+    address:
+      'Hongkong Wan Chai Wan Road, No. 26 China Resources, Building 19 room 1903',
+    phoneNumber: '+7 (852) 3150 6788',
+    fax: '+7 (852) 2116 4031',
+    email: 'cgnmc.hk@pordahavas.com',
+    website: 'www.alabamapower.com/',
+    contacts: [],
+  },
+  {
+    id: 2,
+    name: 'CGN Global Uranium Ltd.',
+    language: 'Китайский',
+    logo: 'https://i.ibb.co/hV7j9c3/CGN-Global-Uranium-Ltd-logo.png',
+    region: 'Азия',
+    address:
+      'Hongkong Wan Chai Wan Road, No. 26 China Resources, Building 19 room 1903',
+    phoneNumber: '+7 (852) 3150 6788',
+    fax: '+7 (852) 2116 4031',
+    email: 'cgnmc.hk@pordahavas.com',
+    website: 'www.cgnmc.com',
+    contacts: [
+      {
+        fullName: 'Li Xiao Ping (Mr.)',
+        position: 'CEO',
+        personalPhoneNumber: '+7 (10 852) 908 93 19',
+        workPhoneNumber: '+7 (10 852) 754 23 12',
+        email: 'lixiaoexample@anymail.com',
+        avatar: 'https://i.pravatar.cc/36?img=3',
+      },
+      {
+        fullName: 'Chongyun',
+        position: 'Chief Administrative Officer',
+        personalPhoneNumber: '+7 (10 852) 908 93 19',
+        workPhoneNumber: '+7 (10 852) 754 23 12',
+        email: 'lixiaoexample@anymail.com',
+        avatar: 'https://i.pravatar.cc/36?img=4',
+      },
+      {
+        fullName: 'Xiangling',
+        position: 'CTO',
+        personalPhoneNumber: '+7 (10 852) 908 93 19',
+        workPhoneNumber: '+7 (10 852) 754 23 12',
+        email: 'lixiaoexample@anymail.com',
+        avatar: 'https://i.pravatar.cc/36?img=5',
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: 'Enusa Industrias Avanzadas, S.A.S.',
+    language: 'Испанский',
+    region: 'Европа',
+    address:
+      'Hongkong Wan Chai Wan Road, No. 26 China Resources, Building 19 room 1903',
+    phoneNumber: '+7 (852) 3150 6788',
+    fax: '+7 (852) 2116 4031',
+    email: 'cgnmc.hk@pordahavas.com',
+    website: 'www.enusa.es',
+    contacts: [
+      {
+        fullName: 'Boris Johnson',
+        position: 'Chief Administrative Officer',
+        personalPhoneNumber: '+7 (10 852) 908 93 19',
+        workPhoneNumber: '+7 (10 852) 754 23 12',
+        email: 'lixiaoexample@anymail.com',
+        avatar: 'https://i.pravatar.cc/36?img=6',
+      },
+    ],
+  },
+];

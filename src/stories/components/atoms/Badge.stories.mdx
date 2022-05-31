@@ -1,0 +1,99 @@
+import { Meta, Story, ArgsTable, Canvas } from '@storybook/addon-docs';
+import { Badge } from '@components/atoms/Badge';
+
+<Meta
+  title="components/atoms/Badge"
+  argTypes={{
+    count: {
+      name: 'Count',
+      description: 'Text shown by Badge',
+      control: {
+        type: 'text',
+      },
+    },
+    status: {
+      options: ['success', 'processing', 'default', 'error', 'warning'],
+      control: { type: 'radio' },
+    },
+    color: {
+      name: 'Count',
+      description: 'Customize Badge dot color',
+      control: {
+        type: 'text',
+      },
+    },
+  }}
+  component={Badge}
+/>
+
+export const Template = (args) => <Badge {...args} />;
+
+# Badge
+
+Badge (aka Tag) — небольшой перекрывающийся элемент пользовательского интерфейса, который указывает на статус, уведомление или событие, которое отображается в относительности с базовым объектом.
+
+### Badge уведомлений
+
+<Canvas>
+  <Story args={{ count: 100 }} name="Badge">
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Badge Success
+
+<Canvas>
+  <Story name="Badge Success">
+    <Badge count="90" className="badge-success" />
+  </Story>
+</Canvas>
+
+### Badge New
+
+<Canvas>
+  <Story args={{ count: 100 }} name="Badge New">
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Badge Draft
+
+<Canvas>
+  <Story args={{ count: 100 }} name="Badge Draft">
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Badge Under revision
+
+<Canvas>
+  <Story args={{ count: 100 }} name="Badge Under revision">
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Badge Pending
+
+<Canvas>
+  <Story args={{ count: 100 }} name="Badge Pending">
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Badge Rejection
+
+<Canvas>
+  <Story args={{ count: 100 }} name="Badge Rejection">
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Badge Link
+
+<Canvas>
+  <Story args={{ count: 100 }} name="Badge Link">
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Badge" />
